@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "E0asGMnDxWtw6nOFwBmapBFP6Ssk56PqQ9zOUeARGLC9d/2ACTv4umxYQ1cdubfK6GmfYJu4+igLq3uBMa6BoA==",
+  "success": true,
+  "projectFilePath": "/home/cl/Desktop/AKS-deployment/world-service/WorldService/WorldService.csproj",
+  "expectedPackageFiles": [
+    "/home/cl/.nuget/packages/microsoft.aspnetcore.openapi/7.0.14/microsoft.aspnetcore.openapi.7.0.14.nupkg.sha512",
+    "/home/cl/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/cl/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/cl/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/home/cl/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/home/cl/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/home/cl/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
