@@ -17,18 +17,18 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 7.0.x
 
     - name: Build and Test HelloService
       run: |
-        cd sample-services/hello-service/HelloService
+        cd hello-service/HelloService
         dotnet restore
         dotnet build --no-restore
         dotnet test --no-build --verbosity normal
 
     - name: Build and Test WorldService
       run: |
-        cd sample-services/world-service/WorldService
+        cd world-service/WorldService
         dotnet restore
         dotnet build --no-restore
         dotnet test --no-build --verbosity normal
