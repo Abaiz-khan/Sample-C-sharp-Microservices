@@ -21,14 +21,14 @@ jobs:
 
     - name: Build and Test HelloService
       run: |
-        cd hello-service/HelloService
+        cd sample-services/hello-service/HelloService
         dotnet restore
         dotnet build --no-restore
         dotnet test --no-build --verbosity normal
 
     - name: Build and Test WorldService
       run: |
-        cd world-service/WorldService
+        cd sample-services/world-service/WorldService
         dotnet restore
         dotnet build --no-restore
         dotnet test --no-build --verbosity normal
