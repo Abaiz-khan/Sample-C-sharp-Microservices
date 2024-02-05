@@ -38,7 +38,7 @@ jobs:
           dotnet swagger tofile --output swagger.json --outputFormat json world-service.csproj
 
 
-  scans:
+   scans:
     runs-on: ubuntu-latest
     name: ZAP API Scan
 
@@ -53,17 +53,18 @@ jobs:
         run: |
           cd Sample-services/hello-service/HelloService
           sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
-            -t swagger.json -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
+            -t http://localhost:5074/hello -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
 
       - name: Run ZAP Active Scan for world-service
         run: |
           cd ../../world-service/WorldService
           sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
-            -t swagger.json -r zap-report_world_$(date -u +'%Y%m%d').html -c api-scan.conf
+            -t http://localhost:5039/world -r zap-report_world_$(date -u +'%Y%m%d').html -c api-scan.conf
 
       - name: Complete Workflow
         run: |
           echo "Workflow Completed: ZAP CI Scan"
+
 
   deploy_reports:
     runs-on: ubuntu-latest
