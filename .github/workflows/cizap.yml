@@ -19,7 +19,7 @@ jobs:
 
       - name: Install .NET Core SDK and Swashbuckle CLI
         run: |
-          sudo apt-get install -y dotnet-sdk-8.0
+          sudo apt-get install -y dotnet-sdk-6.5
           dotnet tool install --global Swashbuckle.AspNetCore.Cli --version 6.5.0
 
       - name: Restore Dependencies and Build hello-service
@@ -62,6 +62,7 @@ jobs:
       - name: Complete Workflow
         run: |
           echo "Workflow Completed: ZAP CI Scan"
+
 
   deploy_reports:
     runs-on: ubuntu-latest
