@@ -50,12 +50,13 @@ jobs:
       - name: Run ZAP Active Scan for hello-service
         run: |
           cd Sample-services/hello-service/HelloService
-          sudo docker run -v $(pwd):/zap/wrk/:rw -t swagger.json -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
+          sudo docker run -v $(pwd):/zap/wrk/:rw -t http://localhost:5074/hello -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
+
 
       - name: Run ZAP Active Scan for world-service
         run: |
           cd ../../world-service/WorldService
-          sudo docker run -v $(pwd):/zap/wrk/:rw -t swagger.json -r zap-report_world_$(date -u +'%Y%m%d').html -c api-scan.conf
+          sudo docker run -v $(pwd):/zap/wrk/:rw -t http://localhost:5039/world -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
 
       - name: Complete Workflow
         run: |
