@@ -26,14 +26,14 @@ jobs:
           cd Sample-services/hello-service/HelloService
           dotnet restore
           dotnet build
-          dotnet swagger tofile --output common-api-spec.json --outputFormat json hello-service.csproj
+          dotnet swagger tofile --output swagger.json --outputFormat json hello-service.csproj
 
       - name: Restore Dependencies and Build world-service
         run: |
           cd ../../world-service/WorldService
           dotnet restore
           dotnet build
-          dotnet swagger tofile --output common-api-spec.json --outputFormat json world-service.csproj
+          dotnet swagger tofile --output swagger.json --outputFormat json world-service.csproj
 
   scans:
     runs-on: ubuntu-latest
@@ -46,17 +46,20 @@ jobs:
       - name: Pull ZAP OWASP Image
         run: docker pull owasp/zap2docker-weekly
 
-      - name: Run ZAP Active Scan
+      - name: Run ZAP Active Scan for Hello Service
         run: |
           cd Sample-services/hello-service/HelloService
           sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
-            -t common-api-spec.json -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
-          
+            -t swagger.json -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
+
+      - name: Run ZAP Active Scan for World Service
+        run: |
           cd ../../world-service/WorldService
           sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
-            -t common-api-spec.json -r zap-report_world_$(date -u +'%Y%m%d').html -c api-scan.conf
+            -t swagger.json -r zap-report_world_$(date -u +'%Y%m%d').html -c api-scan.conf
 
-          echo "Workflow Completed: ZAP CI Scan"
+      - name: Echo Workflow Completed
+        run: echo "Workflow Completed: ZAP CI Scan"
 
   deploy_reports:
     runs-on: ubuntu-latest
@@ -71,7 +74,4 @@ jobs:
           git add Sample-services/*/HelloService/zap-report_hello_* Sample-services/*/WorldService/zap-report_world_*
           git commit -m "Add ZAP scan reports"
           git push origin reports
-          git add Sample-services/*/HelloService/reports/*
-          git add Sample-services/*/WorldService/reports/*
-          git commit -m "Add ZAP scan reports"
-          git push origin reports
+
