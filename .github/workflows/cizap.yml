@@ -18,9 +18,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install .NET Core SDK
+      - name: Install .NET Core SDK and Swashbuckle CLI
         run: |
           sudo apt-get install -y dotnet-sdk-8.0
+          dotnet tool install --global Swashbuckle.AspNetCore.Cli --version 7.0.0
 
       - name: Restore Dependencies and Build hello-service
         run: |
@@ -35,6 +36,7 @@ jobs:
           dotnet restore
           dotnet build
           dotnet swagger tofile --output swagger.json --outputFormat json world-service.csproj
+
 
   scans:
     runs-on: ubuntu-latest
