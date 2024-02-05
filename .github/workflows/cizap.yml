@@ -54,7 +54,7 @@ jobs:
         run: |
           sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
             -t hello-service/common-api-spec.json -t world-service/common-api-spec.json \
-            -f openapi -r reports/zap-report_$(date -u +'%Y%m%d').html -c api-scan.conf
+            -r openapi -o reports/zap-report_$(date -u +'%Y%m%d').html -c api-scan.conf
           echo "Workflow Completed: ZAP CI Scan"
 
   deploy_reports:
@@ -70,4 +70,3 @@ jobs:
           git add reports/*
           git commit -m "Add ZAP scan reports"
           git push origin reports
-
