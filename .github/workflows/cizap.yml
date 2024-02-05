@@ -59,7 +59,8 @@ jobs:
             -t swagger.json -r zap-report_world_$(date -u +'%Y%m%d').html -c api-scan.conf
 
       - name: Echo Workflow Completed
-        run: echo "Workflow Completed: ZAP CI Scan"
+        run: |
+          echo "Workflow Completed: ZAP CI Scan"
 
   deploy_reports:
     runs-on: ubuntu-latest
