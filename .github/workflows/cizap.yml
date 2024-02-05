@@ -2,9 +2,11 @@ name: ZAP CI Scan
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -17,7 +19,7 @@ jobs:
 
       - name: Install .NET Core SDK
         run: |
-          sudo apt-get install -y dotnet-sdk-7.0.x
+          sudo apt-get install -y dotnet-sdk-7.0
 
       - name: Restore Dependencies and Build hello-service
         run: |
@@ -52,5 +54,20 @@ jobs:
         run: |
           sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
             -t hello-service/common-api-spec.json -t world-service/common-api-spec.json \
-            -f openapi -r zap-report_$(date -u +'%Y%m%d').html -c api-scan.conf
+            -f openapi -r reports/zap-report_$(date -u +'%Y%m%d').html -c api-scan.conf
           echo "Workflow Completed: ZAP CI Scan"
+
+  deploy_reports:
+    runs-on: ubuntu-latest
+    needs: scans
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create and Push Reports Branch
+        run: |
+          git checkout -b reports
+          git add reports/*
+          git commit -m "Add ZAP scan reports"
+          git push origin reports
+
