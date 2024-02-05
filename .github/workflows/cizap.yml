@@ -1,4 +1,3 @@
-
 name: ZAP CI Scan
 
 on:
@@ -21,7 +20,7 @@ jobs:
       - name: Install .NET Core SDK and Swashbuckle CLI
         run: |
           sudo apt-get install -y dotnet-sdk-8.0
-          dotnet tool install --global Swashbuckle.AspNetCore.Cli --version 7.0.0
+          dotnet tool install --global Swashbuckle.AspNetCore.Cli --version 6.5.0
 
       - name: Restore Dependencies and Build hello-service
         run: |
