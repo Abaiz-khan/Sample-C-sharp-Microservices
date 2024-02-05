@@ -8,6 +8,7 @@ on:
   pull_request:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,8 +37,7 @@ jobs:
           dotnet build
           dotnet swagger tofile --output swagger.json --outputFormat json world-service.csproj
 
-
-   scans:
+  scans:
     runs-on: ubuntu-latest
     name: ZAP API Scan
 
@@ -64,7 +64,6 @@ jobs:
         run: |
           echo "Workflow Completed: ZAP CI Scan"
 
-
   deploy_reports:
     runs-on: ubuntu-latest
     needs: scans
@@ -78,3 +77,4 @@ jobs:
           git add Sample-services/*/HelloService/zap-report_hello_* Sample-services/*/WorldService/zap-report_world_*
           git commit -m "Add ZAP scan reports"
           git push origin reports
+
