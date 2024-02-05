@@ -27,14 +27,14 @@ jobs:
           cd Sample-services/hello-service/HelloService
           dotnet restore
           dotnet build
-          dotnet swagger tofile --output swagger.json --outputFormat json hello-service.csproj
+      
 
       - name: Restore Dependencies and Build world-service
         run: |
           cd ../../world-service/WorldService
           dotnet restore
           dotnet build
-          dotnet swagger tofile --output swagger.json --outputFormat json world-service.csproj
+
 
   scans:
     runs-on: ubuntu-latest
