@@ -1,0 +1,45 @@
+name: ZAP CI Scan
+
+on:
+  push:
+    branches: [ development ]
+  pull_request:
+    branches: [ development ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build and Generate OpenAPI Specifications
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: |
+          # Add commands to install dependencies required for your build process
+          # For example, if using .NET, you might run "dotnet restore"
+
+      - name: Build and Generate OpenAPI Specifications
+        run: |
+          # Add commands to build your project and generate OpenAPI specifications
+          # For example, if using .NET Core with Swashbuckle:
+          # dotnet build
+          # dotnet swagger tofile --output common-api-spec.json
+
+  scans:
+    runs-on: ubuntu-latest
+    name: ZAP API Scan
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Pull ZAP OWASP Image
+        run: docker pull owasp/zap2docker-weekly
+
+      - name: Run ZAP Active Scan
+        run: |
+          sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
+            -t common-api-spec.json -f openapi -r zap-report_$(date -u +'%Y%m%d').html -c api-scan.conf
+            echo "Workflow Completed: ZAP CI Scan"
