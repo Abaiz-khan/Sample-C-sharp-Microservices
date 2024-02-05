@@ -1,3 +1,4 @@
+
 name: ZAP CI Scan
 
 on:
@@ -49,18 +50,16 @@ jobs:
       - name: Run ZAP Active Scan for hello-service
         run: |
           cd Sample-services/hello-service/HelloService
-          sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
-            -t swagger.json -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
+          sudo docker run -v $(pwd):/zap/wrk/:rw -t swagger.json -r zap-report_hello_$(date -u +'%Y%m%d').html -c api-scan.conf
 
       - name: Run ZAP Active Scan for world-service
         run: |
           cd ../../world-service/WorldService
-          sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-full-scan.py \
-            -t swagger.json -r zap-report_world_$(date -u +'%Y%m%d').html -c api-scan.conf
+          sudo docker run -v $(pwd):/zap/wrk/:rw -t swagger.json -r zap-report_world_$(date -u +'%Y%m%d').html -c api-scan.conf
 
       - name: Complete Workflow
         run: |
-             echo "Workflow Completed: ZAP CI Scan"
+          echo "Workflow Completed: ZAP CI Scan"
 
   deploy_reports:
     runs-on: ubuntu-latest
@@ -75,5 +74,3 @@ jobs:
           git add Sample-services/*/HelloService/zap-report_hello_* Sample-services/*/WorldService/zap-report_world_*
           git commit -m "Add ZAP scan reports"
           git push origin reports
-
-
