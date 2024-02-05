@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E0asGMnDxWtw6nOFwBmapBFP6Ssk56PqQ9zOUeARGLC9d/2ACTv4umxYQ1cdubfK6GmfYJu4+igLq3uBMa6BoA==",
+  "dgSpecHash": "KXOMEMK1TM1v5fRUt3yQwASsT9w8ywZJvL9djLkicuMYrojxcjUglzERF8HDh5V2aOo9bKnM9Xs3KIgbLfaMhQ==",
   "success": true,
-  "projectFilePath": "/home/cl/Desktop/AKS-deployment/world-service/WorldService/WorldService.csproj",
+  "projectFilePath": "/home/cl/Desktop/forzap2/Sample-services/world-service/WorldService/WorldService.csproj",
   "expectedPackageFiles": [
     "/home/cl/.nuget/packages/microsoft.aspnetcore.openapi/7.0.14/microsoft.aspnetcore.openapi.7.0.14.nupkg.sha512",
     "/home/cl/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
