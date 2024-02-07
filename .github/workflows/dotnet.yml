@@ -29,6 +29,9 @@ jobs:
     - name: Build and Test WorldService
       run: |
         cd Sample-services/world-service/WorldService
+        dotnet restore
+        dotnet build --no-restore
+        dotnet test --no-build --verbosity normal
 
        # --------------------------------  from here job two starts------------------------------------------------
 
@@ -141,6 +144,4 @@ jobs:
         with:
           name: zap-scan-report
           path: ./Sample-services/zap-alerts-world.txt       
-        dotnet restore
-        dotnet build --no-restore
-        dotnet test --no-build --verbosity normal
+       
