@@ -102,11 +102,17 @@ jobs:
            python3 zap-testing-world.py
            echo "------------- ZAP TESTING for world done --------------"
   
-      - name: "Upload Report"
+      - name: "Upload Report of hello service"
         uses: actions/upload-artifact@v1
         with:
           name: zap-scan-report
           path: ./Sample-services/zap-alerts.txt
+
+      - name: "Upload Report of world service"
+        uses: actions/upload-artifact@v1
+        with:
+          name: zap-scan-report
+          path: ./Sample-services/zap-alerts-world.txt    
                 
 
 
