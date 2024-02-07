@@ -9,8 +9,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      - name: Set up Docker
-        uses: papodaca/install-docker-action@v1
+      # - name: Set up Docker
+      #   uses: papodaca/install-docker-action@v1
         
       - name: Setup Python 3.10.12
         uses: actions/setup-python@v2
