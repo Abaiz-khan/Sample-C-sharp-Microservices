@@ -5,45 +5,79 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    services:
-      zap:
-        image: owasp/zap2docker-stable
-        ports:
-          - 8090:8090
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Setup Python 3.10.12
         uses: actions/setup-python@v2
         with:
           python-version: 3.10.12
+
       - name: Install Docker Compose
         run: |
           sudo apt-get update
           sudo apt-get install -y docker-compose
+
       - name: Install Java 18.0.2-ea
         run: |
           sudo apt-get install -y openjdk-18-jdk
           java -version
-      - name: Install python deps
+
+      - name: Install Python dependencies
         run: |
-          python -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip
           pip install requests python-owasp-zap-v2.4
-      - name: Build Image
-        run: docker-compose -f ./Sample-services/docker-compose.yml build
-      - name: Run Docker Compose
-        run: docker-compose -f ./Sample-services/docker-compose.yml up -d
+
+      - name: Get working directory
+        run: pwd
+
+      - name: Run Docker Compose up
+        run: |
+          docker-compose -f ./Sample-services/docker-compose.yml up -d
+          echo "------ Docker Compose up done -----"
+
+      - name: Install OWASP ZAP
+        run: |
+          mkdir -p ./zap
+          cd ./zap
+          wget -N https://github.com/zaproxy/zaproxy/releases/download/v2.9.0/ZAP_2.9.0_Linux.tar.gz
+          tar -zxvf ZAP_2.9.0_Linux.tar.gz
+          rm ZAP_2.9.0_Linux.tar.gz
+          cd ZAP_2.9.0/plugin
+          wget https://github.com/zaproxy/zap-extensions/releases/download/exportreport-v6/exportreport-alpha-6.zap
+          echo 'export PATH_ZAP_SH=./zap/ZAP_2.9.0/zap.sh' >> ~/.bashrc
+          echo 'export ZAP_PORT=8090' >> ~/.bashrc
+          echo 'sh -c "$PATH_ZAP_SH -daemon -host 0.0.0.0 -port $ZAP_PORT -configfile ./zap/ZAP_2.9.0/conf" > /dev/null & ' > start-zap
+          echo 'sleep 40' >> start-zap
+          echo 'sh -c "$PATH_ZAP_SH -host 0.0.0.0 -port $ZAP_PORT -configfile ./zap/ZAP_2.9.0/conf" > /dev/null & ' > start-gui-zap
+          echo 'sleep 40' >> start-gui-zap
+          echo 'pkill -f zap' > stop-zap
+          chmod +x start-zap
+          chmod +x start-gui-zap
+          chmod +x stop-zap
+          echo $pwd
+          echo "ZAP installed"
+
+      - name: Run ZAP Daemon
+        run: ./zap/ZAP_2.9.0/zap.sh -daemon -host 0.0.0.0 -port 8090 -config api.addrs.addr.name=".*" -config api.addrs.addr.regex=true -config api.disablekey=true > /dev/null &
+
       - name: Sleep for a bit
         uses: jakejarvis/wait-action@master
         with:
-          time: '20s'
-      - name: Run Test Automation with ZAP (zap-testing-world.py)
-        run: |
-          docker-compose -f ./Sample-services/docker-compose.yml exec zap python ./Sample-services/zap-testing-world.py
+          time: "20s"
+
       - name: Run Test Automation with ZAP (zap-testing.py)
         run: |
-          docker-compose -f ./Sample-services/docker-compose.yml exec zap python ./Sample-services/zap-testing.py
+          cd ./Sample-services
+          python3 zap-testing.py
+          echo "---------- ZAP TESTING for hello done ------------------"
+          python3 zap-testing-world.py
+          echo "------------- ZAP TESTING for world done --------------"
+
       - name: Upload Reports
         uses: actions/upload-artifact@v1
         with:
           name: zap-scan-reports
           path: ./Sample-services/*.txt
+
