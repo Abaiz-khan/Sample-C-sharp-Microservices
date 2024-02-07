@@ -76,6 +76,7 @@ jobs:
       - name: Run Test Automation with ZAP (zap-testing.py)
         run: |
           cd ./Sample-services
+          sudo pip install selenium
           python3 zap-testing.py
           echo "---------- ZAP TESTING for hello done ------------------"
           python3 zap-testing-world.py
