@@ -40,7 +40,7 @@ jobs:
 
       - name: Run Docker Compose up
         run: |
-          docker-compose -f /docker-compose.yml up -d
+          docker-compose -f ./docker-compose.yml up -d
           echo "------ Docker Compose up done -----"
 
       - name: Install OWASP ZAP
