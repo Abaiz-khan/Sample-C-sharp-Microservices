@@ -99,10 +99,12 @@ jobs:
            python3 -m pip install selenium
            python3 zap-testing-world.py
            echo "------------- ZAP TESTING for world done --------------"
-      
-      - name: Upload Reports
+  
+      - name: "Upload Report"
         uses: actions/upload-artifact@v1
         with:
-          name: zap-scan-reports
-          path: ./Sample-services/*.txt
+          name: zap-scan-report
+          path: ./Sample-services/zap-alerts.txt
+                ./Sample-services/zap-testing-world.txt 
+
 
