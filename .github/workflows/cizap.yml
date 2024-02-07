@@ -95,6 +95,8 @@ jobs:
           
       - name: Run Test Automation with ZAp (for world) 
         run: |
+           cd ./Sample-services
+           python3 -m pip install selenium
            python3 zap-testing-world.py
            echo "------------- ZAP TESTING for world done --------------"
       
