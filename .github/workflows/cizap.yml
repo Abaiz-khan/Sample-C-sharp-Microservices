@@ -13,7 +13,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.10.12
-
+      
+      - name: Install Docker
+        uses: papodaca/install-docker-action@v1
+          
       - name: Install Docker Compose
         run: |
           sudo apt-get update
@@ -34,7 +37,7 @@ jobs:
 
       - name: Run Docker Compose up
         run: |
-          docker-compose -f ./Sample-services/docker-compose.yml up -d
+          docker-compose -f /docker-compose.yml up -d
           echo "------ Docker Compose up done -----"
 
       - name: Install OWASP ZAP
