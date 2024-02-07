@@ -32,3 +32,4 @@
 /home/cl/Desktop/forzap2/Sample-services/world-service/WorldService/obj/Debug/net8.0/WorldService.pdb
 /home/cl/Desktop/forzap2/Sample-services/world-service/WorldService/obj/Debug/net8.0/WorldService.genruntimeconfig.cache
 /home/cl/Desktop/forzap2/Sample-services/world-service/WorldService/obj/Debug/net8.0/ref/WorldService.dll
+/home/cl/Desktop/forzap2/Sample-services/world-service/WorldService/obj/Debug/net8.0/WorldService.sourcelink.json

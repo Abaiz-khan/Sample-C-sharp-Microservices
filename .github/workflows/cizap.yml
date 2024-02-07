@@ -1,19 +1,17 @@
-name: ZAP CI Scan
-
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    name: Build and Generate OpenAPI Specifications
-
+    runs-on: ubuntu-22.04
+    services:
+      zap:
+        image: owasp/zap2docker-stable
+        ports:
+          - 8090:8090
     steps:
+<<<<<<< HEAD
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -23,14 +21,24 @@ jobs:
           dotnet tool install --global Swashbuckle.AspNetCore.Cli --version 6.5.0
 
       - name: Restore Dependencies and Build hello-service
+=======
+      - uses: actions/checkout@v2
+      - name: Setup Python 3.10.12
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.12
+      - name: Install Docker Compose
         run: |
-          cd Sample-services/hello-service/HelloService
-          dotnet restore
-          dotnet build
-          dotnet swagger tofile --output swagger.json --outputFormat json hello-service.csproj
-
-      - name: Restore Dependencies and Build world-service
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
+      - name: Install Java 18.0.2-ea
+>>>>>>> cc0c8ef (modifications for zap testing)
         run: |
+          sudo apt-get install -y openjdk-18-jdk
+          java -version
+      - name: Install python deps
+        run: |
+<<<<<<< HEAD
           cd ../../world-service/WorldService
           dotnet restore
           dotnet build
@@ -78,3 +86,26 @@ jobs:
           git commit -m "Add ZAP scan reports"
           git push origin reports
 
+=======
+          python -m pip install --upgrade pip
+          pip install requests python-owasp-zap-v2.4
+      - name: Build Image
+        run: docker-compose -f ./Sample-services/docker-compose.yml build
+      - name: Run Docker Compose
+        run: docker-compose -f ./Sample-services/docker-compose.yml up -d
+      - name: Sleep for a bit
+        uses: jakejarvis/wait-action@master
+        with:
+          time: "20s"
+      - name: Run Test Automation with ZAP (zap-testing-world.py)
+        run: |
+          docker-compose -f ./Sample-services/docker-compose.yml exec zap python ./Sample-services/zap-testing-world.py
+      - name: Run Test Automation with ZAP (zap-testing.py)
+        run: |
+          docker-compose -f ./Sample-services/docker-compose.yml exec zap python ./Sample-services/zap-testing.py
+      - name: Upload Reports
+        uses: actions/upload-artifact@v1
+        with:
+          name: zap-scan-reports
+          path: ./Sample-services/*.txt
+>>>>>>> cc0c8ef (modifications for zap testing)
