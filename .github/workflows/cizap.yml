@@ -107,6 +107,6 @@ jobs:
         with:
           name: zap-scan-report
           path: ./Sample-services/zap-alerts.txt
-                ./Sample-services/zap-testing-world.txt 
+                
 
 
