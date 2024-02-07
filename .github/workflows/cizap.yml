@@ -25,10 +25,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y docker-compose
 
-      - name: Install Java 18.0.2-ea
-        run: |
-          sudo apt-get install -y openjdk-18-jdk
-          java -version
+      # - name: Install Java 18.0.2-ea
+      #   run: |
+      #     sudo apt-get install -y openjdk-18-jdk
+      #     java -version
 
       - name: Install Python dependencies
         run: |
