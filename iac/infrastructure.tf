@@ -11,7 +11,6 @@ terraform {
     storage_account_name = "terraformtffile"
     container_name       = "tfstatefile"
     key                  = "terraform.tfstate"
-    access_key           = "5dBW14y+LiDNFPFEK4bIhuZ/04pmrt5cjqjPdrurNBYAfaDnrH4j871uqgRV/Od8b74UtHeNLMzd+AStA5wRBg=="
   }
 }
 
