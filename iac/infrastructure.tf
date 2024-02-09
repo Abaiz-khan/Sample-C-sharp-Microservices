@@ -2,7 +2,7 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "3.89.0"
     }
   }
@@ -62,3 +62,4 @@ resource "azurerm_role_assignment" "aksrole" {
   scope                            = azurerm_container_registry.acr.id
   skip_service_principal_aad_check = true
 }
+
