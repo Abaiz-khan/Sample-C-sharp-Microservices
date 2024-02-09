@@ -2,7 +2,7 @@ name: "Terraform-infrastructure-deployment"
 
 on:
   push:
-    branches: [main]
+    branches: [iac]
 
 jobs:
   terraform:
