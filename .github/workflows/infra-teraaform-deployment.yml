@@ -65,6 +65,6 @@ jobs:
         with:
           tf_actions_version: 0.14.8
           tf_actions_subcommand: "destroy"
-          tf_actions_working_dir: "./iac""
+          tf_actions_working_dir: "./iac"
         
         
