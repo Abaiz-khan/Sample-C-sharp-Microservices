@@ -8,10 +8,10 @@ terraform {
   }
 
   backend "azurerm" {
-    storage_account_name = "zirconbluetf"
-    container_name       = "zirconbluetf"
+    storage_account_name = "terraformtffile"
+    container_name       = "tfstatefile"
     key                  = "terraform.tfstate"
-    access_key           = "4UQknITBAYl0hQkHjBGjncnbW16/TzwzpJUNAD0n/Dt3XdZ+Wyl/bo496wTQw6h6lArhlEVV7tKr+ASttt2j5g=="
+    access_key           = "5dBW14y+LiDNFPFEK4bIhuZ/04pmrt5cjqjPdrurNBYAfaDnrH4j871uqgRV/Od8b74UtHeNLMzd+AStA5wRBg=="
   }
 }
 
