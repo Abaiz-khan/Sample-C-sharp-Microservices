@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net7.0": {
       "Microsoft.AspNetCore.OpenApi/7.0.14": {
         "type": "package",
         "dependencies": {
@@ -463,7 +463,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.14",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "Swashbuckle.AspNetCore.SwaggerUI >= 6.5.0"
@@ -475,24 +475,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/cl/Desktop/forzap2/Sample-services/world-service/WorldService/WorldService.csproj",
+      "projectUniqueName": "/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/WorldService.csproj",
       "projectName": "WorldService",
-      "projectPath": "/home/cl/Desktop/forzap2/Sample-services/world-service/WorldService/WorldService.csproj",
+      "projectPath": "/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/WorldService.csproj",
       "packagesPath": "/home/cl/.nuget/packages/",
-      "outputPath": "/home/cl/Desktop/forzap2/Sample-services/world-service/WorldService/obj/",
+      "outputPath": "/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/cl/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net7.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {}
         }
       },
@@ -503,8 +503,8 @@
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
@@ -530,6 +530,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -538,7 +552,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

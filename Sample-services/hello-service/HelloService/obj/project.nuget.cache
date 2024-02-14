@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JPr7RT7HgTztihYjjn57GVolTBD0ric7MDzw0uGE6CIj73wJ03vKniDhzHnlf2VqyY+5q47xXKKiYy3Go9N5Rw==",
+  "dgSpecHash": "ta8J4cLFOhFkgq3peC+kRtnffHRAWcwVB7fHVzj1sqTu7kp0KXrLsdr/gKsUuV85CkjlzVZrMw8S8NU7sttwwA==",
   "success": true,
-  "projectFilePath": "/home/cl/Desktop/forzap2/Sample-services/hello-service/HelloService/HelloService.csproj",
+  "projectFilePath": "/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/HelloService.csproj",
   "expectedPackageFiles": [
     "/home/cl/.nuget/packages/microsoft.aspnetcore.openapi/7.0.14/microsoft.aspnetcore.openapi.7.0.14.nupkg.sha512",
     "/home/cl/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -10,7 +10,10 @@
     "/home/cl/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/home/cl/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/home/cl/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "/home/cl/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "/home/cl/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "/home/cl/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "/home/cl/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "/home/cl/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.15/microsoft.netcore.app.host.linux-x64.7.0.15.nupkg.sha512"
   ],
   "logs": []
 }
