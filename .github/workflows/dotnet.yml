@@ -146,7 +146,7 @@ jobs:
           path: ./Sample-services/zap-alerts-world.txt       
        
 ############### From here job 3 starts ##############
-  Unit_test:
+  Unittest-HelloService:
     runs-on: ubuntu-22.04
     needs: zap_test
     steps:
@@ -163,5 +163,20 @@ jobs:
 
       - name: Run tests
         run: dotnet test ./Sample-services/hello-service/HelloService.Tests
+ ################################# Form here job 4 starts ########################
+  Unittest-WorldService:
+    name: Unit Test World Service
+    runs-on: ubuntu-latest
+    needs: Unittest-HelloService
+    steps:
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '8.0.x'  # Change this to the desired .NET SDK version
 
+      - name: Restore dependencies
+        run: dotnet restore ./Sample-services/world-service/WorldService.Tests
+
+      - name: Run tests
+        run: dotnet test ./Sample-services/world-service/WorldService.Tests
   
