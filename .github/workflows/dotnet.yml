@@ -148,7 +148,7 @@ jobs:
 ############### From here job 3 starts ##############
   Unit_test:
     runs-on: ubuntu-22.04
-    needs: build-test
+    needs: zap_test
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
