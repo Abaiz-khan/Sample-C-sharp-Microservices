@@ -145,3 +145,23 @@ jobs:
           name: zap-scan-report
           path: ./Sample-services/zap-alerts-world.txt       
        
+############### From here job 3 starts ##############
+  Unit_test:
+    runs-on: ubuntu-22.04
+    needs: build-test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore ./Sample-services/hello-service/HelloService.Tests
+
+      - name: Run tests
+        run: dotnet test ./Sample-services/hello-service/HelloService.Tests
+
+  
