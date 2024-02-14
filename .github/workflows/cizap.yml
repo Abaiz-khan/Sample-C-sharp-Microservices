@@ -1,4 +1,4 @@
-name: ZAP-TESTING
+name: Unit-Testing
 
 on:
   push:
@@ -6,113 +6,36 @@ on:
 
 jobs:
   build:
+    name: Build and Test Hello Service
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
-      # - name: Set up Docker
-      #   uses: papodaca/install-docker-action@v1
-        
-      - name: Setup Python 3.10.12
-        uses: actions/setup-python@v2
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v1
         with:
-          python-version: 3.10.12
-      
-      # - name: Install Docker
-      #   uses: papodaca/install-docker-action@v1
-          
-      - name: Install Docker Compose
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker-compose
+          dotnet-version: '7.0.x'  # Change this to the desired .NET SDK version
 
-      # - name: Install Java 18.0.2-ea
-      #   run: |
-      #     sudo apt-get install -y openjdk-18-jdk
-      #     java -version
+      - name: Restore dependencies
+        run: dotnet restore ./Sample-services/hello-service/HelloService.Tests
 
-      - name: Install Python dependencies
-        run: |
-          python3 -m pip install --upgrade pip
-          pip install requests python-owasp-zap-v2.4
+      - name: Run tests
+        run: dotnet test ./Sample-services/hello-service/HelloService.Tests
 
-      - name: Get working directory
-        run: pwd
-
-      - name: Run Docker Compose up
-        run: |
-          docker-compose -f ./docker-compose.yml up -d
-          echo "------ Docker Compose up done -----"
-
-      - name: Install OWASP ZAP
-        run: |
-          mkdir -p ./zap
-          cd ./zap
-          wget -N https://github.com/zaproxy/zaproxy/releases/download/v2.14.0/ZAP_2.14.0_Linux.tar.gz
-          tar -zxvf ZAP_2.14.0_Linux.tar.gz
-          rm ZAP_2.14.0_Linux.tar.gz
-          cd ZAP_2.14.0/plugin
-          wget https://github.com/zaproxy/zap-extensions/releases/download/exportreport-v6/exportreport-alpha-6.zap
-          echo 'export PATH_ZAP_SH=./zap/ZAP_2.14.0/zap.sh' >> ~/.bashrc
-          echo 'export ZAP_PORT=8090' >> ~/.bashrc
-          echo 'sh -c "$PATH_ZAP_SH -daemon -host 0.0.0.0 -port $ZAP_PORT -configfile ./zap/ZAP_2.14.0/conf" > /dev/null & ' > start-zap
-          echo 'sleep 40' >> start-zap
-          echo 'sh -c "$PATH_ZAP_SH -host 0.0.0.0 -port $ZAP_PORT -configfile ./zap/ZAP_2.14.0/conf" > /dev/null & ' > start-gui-zap
-          echo 'sleep 40' >> start-gui-zap
-          echo 'pkill -f zap' > stop-zap
-          chmod +x start-zap
-          chmod +x start-gui-zap
-          chmod +x stop-zap
-          echo $pwd
-          echo "ZAP installed"
-
-      - name: Run ZAP Daemon
-        run: ./zap/ZAP_2.14.0/zap.sh -daemon -host 0.0.0.0 -port 8090 -config api.addrs.addr.name=".*" -config api.addrs.addr.regex=true -config api.disablekey=true > /dev/null &
-
-      - name: Sleep for a bit
-        uses: jakejarvis/wait-action@master
+  test-world-service:
+    name: Test World Service
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v1
         with:
-          time: "30s"
+          dotnet-version: '7.0.x'  # Change this to the desired .NET SDK version
 
-      - name: Run Test Automation with ZAP (for hello)
-        run: |
-          cd ./Sample-services
-          python3 -m pip install selenium
-          python3 zap-testing.py
-          echo "---------- ZAP TESTING for hello done ------------------"
-         
+      - name: Restore dependencies
+        run: dotnet restore ./Sample-services/world-service/WorldService.Tests
 
-      - name: Stop ZAP Daemon
-        run: |
-          pkill -f zap
-          
-      - name: Run ZAP Daemon
-        run: ./zap/ZAP_2.14.0/zap.sh -daemon -host 0.0.0.0 -port 8090 -config api.addrs.addr.name=".*" -config api.addrs.addr.regex=true -config api.disablekey=true > /dev/null &
-
-      - name: Sleep for a bit
-        uses: jakejarvis/wait-action@master
-        with:
-          time: "30s"
-          
-      - name: Run Test Automation with ZAp (for world) 
-        run: |
-           cd ./Sample-services
-           python3 -m pip install selenium
-           python3 zap-testing-world.py
-           echo "------------- ZAP TESTING for world done --------------"
-  
-      - name: "Upload Report of hello service"
-        uses: actions/upload-artifact@v1
-        with:
-          name: zap-scan-report
-          path: ./Sample-services/zap-alerts.txt
-
-      - name: "Upload Report of world service"
-        uses: actions/upload-artifact@v1
-        with:
-          name: zap-scan-report
-          path: ./Sample-services/zap-alerts-world.txt    
-                
-
+      - name: Run tests
+        run: dotnet test ./Sample-services/world-service/WorldService.Tests
 
