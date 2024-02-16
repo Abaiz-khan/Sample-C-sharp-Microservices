@@ -1,0 +1,20 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "HelloService",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Hello": {
+      "get": {
+        "tags": ["Hello"],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

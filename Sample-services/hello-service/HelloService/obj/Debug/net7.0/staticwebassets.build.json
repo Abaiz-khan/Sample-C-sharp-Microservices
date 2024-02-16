@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FRZp3XilMXMzes+h7HfDuFFBSdVU4S7KbRwwaGActeQ=",
+  "Source": "HelloService",
+  "BasePath": "_content/HelloService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

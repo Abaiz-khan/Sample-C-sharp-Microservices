@@ -1,0 +1,23 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WorldService",
+    "version": "1.0"
+  },
+  "paths": {
+    "/World": {
+      "get": {
+        "tags": [
+          "World"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
+

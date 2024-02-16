@@ -1,0 +1,68 @@
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/appsettings.Development.json
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/appsettings.json
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/HelloService
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/HelloService.deps.json
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/HelloService.runtimeconfig.json
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/HelloService.dll
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/HelloService.pdb
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.csproj.AssemblyReference.cache
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.GeneratedMSBuildEditorConfig.editorconfig
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.AssemblyInfoInputs.cache
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.AssemblyInfo.cs
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.csproj.CoreCompileInputs.cache
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.MvcApplicationPartsAssemblyInfo.cs
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.MvcApplicationPartsAssemblyInfo.cache
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/staticwebassets/msbuild.HelloService.Microsoft.AspNetCore.StaticWebAssets.props
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/staticwebassets/msbuild.build.HelloService.props
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.HelloService.props
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.HelloService.props
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/staticwebassets.pack.json
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/staticwebassets.build.json
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/staticwebassets.development.json
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/scopedcss/bundle/HelloService.styles.css
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.csproj.CopyComplete
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.dll
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/refint/HelloService.dll
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.pdb
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/HelloService.genruntimeconfig.cache
+/home/cl/Desktop/AKS-deployment/hello-service/HelloService/obj/Debug/net7.0/ref/HelloService.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/appsettings.Development.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/appsettings.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/swagger.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/HelloService
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/HelloService.deps.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/HelloService.runtimeconfig.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/HelloService.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/HelloService.pdb
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.csproj.AssemblyReference.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.GeneratedMSBuildEditorConfig.editorconfig
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.AssemblyInfoInputs.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.AssemblyInfo.cs
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.csproj.CoreCompileInputs.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.MvcApplicationPartsAssemblyInfo.cs
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.MvcApplicationPartsAssemblyInfo.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.sourcelink.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/staticwebassets.build.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/staticwebassets.development.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/staticwebassets/msbuild.HelloService.Microsoft.AspNetCore.StaticWebAssets.props
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/staticwebassets/msbuild.build.HelloService.props
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.HelloService.props
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.HelloService.props
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/staticwebassets.pack.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/scopedcss/bundle/HelloService.styles.css
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.csproj.CopyComplete
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/refint/HelloService.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.pdb
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/HelloService.genruntimeconfig.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/hello-service/HelloService/obj/Debug/net7.0/ref/HelloService.dll

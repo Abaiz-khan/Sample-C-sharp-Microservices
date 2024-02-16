@@ -1,0 +1,68 @@
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/appsettings.Development.json
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/appsettings.json
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/WorldService
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/WorldService.deps.json
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/WorldService.runtimeconfig.json
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/WorldService.dll
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/WorldService.pdb
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.csproj.AssemblyReference.cache
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.GeneratedMSBuildEditorConfig.editorconfig
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.AssemblyInfoInputs.cache
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.AssemblyInfo.cs
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.csproj.CoreCompileInputs.cache
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.MvcApplicationPartsAssemblyInfo.cs
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.MvcApplicationPartsAssemblyInfo.cache
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/staticwebassets/msbuild.WorldService.Microsoft.AspNetCore.StaticWebAssets.props
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/staticwebassets/msbuild.build.WorldService.props
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.WorldService.props
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.WorldService.props
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/staticwebassets.pack.json
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/staticwebassets.build.json
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/staticwebassets.development.json
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/scopedcss/bundle/WorldService.styles.css
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.csproj.CopyComplete
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.dll
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/refint/WorldService.dll
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.pdb
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/WorldService.genruntimeconfig.cache
+/home/cl/Desktop/AKS-deployment/world-service/WorldService/obj/Debug/net7.0/ref/WorldService.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/appsettings.Development.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/appsettings.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/swagger.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService.deps.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService.runtimeconfig.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService.pdb
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.csproj.AssemblyReference.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.GeneratedMSBuildEditorConfig.editorconfig
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.AssemblyInfoInputs.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.AssemblyInfo.cs
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.csproj.CoreCompileInputs.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.MvcApplicationPartsAssemblyInfo.cs
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.MvcApplicationPartsAssemblyInfo.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.sourcelink.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/staticwebassets.build.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/staticwebassets.development.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/staticwebassets/msbuild.WorldService.Microsoft.AspNetCore.StaticWebAssets.props
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/staticwebassets/msbuild.build.WorldService.props
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.WorldService.props
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.WorldService.props
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/staticwebassets.pack.json
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/scopedcss/bundle/WorldService.styles.css
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.csproj.CopyComplete
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/refint/WorldService.dll
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.pdb
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.genruntimeconfig.cache
+/home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/ref/WorldService.dll
