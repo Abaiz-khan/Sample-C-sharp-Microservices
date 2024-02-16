@@ -13,15 +13,16 @@ jobs:
           
       - name: Deploying Services
         run: |
-           pwd
-           cd ./sample-services/Deployment-definitions/
-           az aks get-credentials --resource-group debug-demo --name debugdemocluster
-           kubectl get nodes
-           az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
-           cd ./Deployment-definitions
-           kubectl apply -f hello-deployment.yaml
-           kubectl apply -f world-deployment.yaml
-           kubectl get events
-           kubectl get services
+          pwd
+          cd ./Deployment-definitions
+          az aks get-credentials --resource-group debug-demo --name debugdemocluster
+          kubectl get nodes
+          az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
+          cd ./Deployment-definitions
+          kubectl apply -f hello-deployment.yaml
+          kubectl apply -f world-deployment.yaml
+          kubectl get events
+          kubectl get services
+
          
 
