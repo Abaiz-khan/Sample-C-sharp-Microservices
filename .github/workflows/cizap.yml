@@ -12,6 +12,7 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - name: Deploying Services
         run: |
+           pwd
            cd ./Deployment-definitions
            az aks get-credentials --resource-group debug-demo --name debugdemocluster
            kubectl get nodes
