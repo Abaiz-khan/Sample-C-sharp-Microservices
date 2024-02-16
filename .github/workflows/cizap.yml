@@ -13,7 +13,7 @@ jobs:
           
       - name: Deploying Services
         run: |
-          find /home -type d -name "Deployment-definitions"
+          find / -type d -name "Deployment-definitions"
           pwd
           cd ./Deployment-definitions
           az aks get-credentials --resource-group debug-demo --name debugdemocluster
