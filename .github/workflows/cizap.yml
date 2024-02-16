@@ -17,9 +17,7 @@ jobs:
              az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
       - name: Navigating to directory
         run: |
-             pwd
-             ls
-             cd ../Deployment-definitions
+             cd Deployment-definitions
              kubectl apply -f hello-deployment.yaml
              kubectl apply -f world-deployment.yaml
              kubectl get events
