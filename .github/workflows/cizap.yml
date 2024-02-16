@@ -1,26 +1,13 @@
-name: Build-push-docker-images
+on: [push]
 
-on:
-  push:
-    branches: [main]
+name: AzureLoginSample
 
 jobs:
-  build:
-    name: For Hello Service
-    runs-on: ubuntu-22.04
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: az login
-        uses: azure/docker-login@v1
+      - name: Log in with Azure
+        uses: azure/login@v1
         with:
-          login-server: debugdemoimage.azurecr.io
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
-      - name: Docker build and push
-        run: |
-          cd Sample-services/world-service/WorldService
-          docker build . -t hello-service
-          docker tag hello-service:latest debugdemoimage.azurecr.io/hello-service:latest
-          docker push debugdemoimage.azurecr.io/hello-service:latest
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
