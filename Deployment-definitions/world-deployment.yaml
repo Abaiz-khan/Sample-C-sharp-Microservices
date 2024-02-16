@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: world-service-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: world-service
+  template:
+    metadata:
+      labels:
+        app: world-service
+    spec:
+      containers:
+        - name: world-service
+          image: debugdemoimage.azurecr.io/world-service:latest
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: world-service
+spec:
+  selector:
+    app: world-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
