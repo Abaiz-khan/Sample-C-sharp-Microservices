@@ -2,9 +2,9 @@ name: CI-PIPELINE
 
 on:
   push:
-    # branches: [ "main" ]
+     branches: [ "main" ]
   pull_request:
-    # branches: [ "main" ]
+     branches: [ "main" ]
 
 jobs:
   build-test:
@@ -196,7 +196,27 @@ jobs:
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - name: Docker build and push
         run: |
-          cd Sample-services/world-service/WorldService
+          cd Sample-services/hello-service/HelloService
           docker build . -t hello-service
           docker tag hello-service:latest debugdemoimage.azurecr.io/hello-service:latest
           docker push debugdemoimage.azurecr.io/hello-service:latest
+
+############################################ From here job 6 starts #######################
+  Pushingimages-WorldService:
+   runs-on: ubuntu-22.04
+   needs: Unittest-WorldService
+   steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: az login
+        uses: azure/docker-login@v1
+        with:
+          login-server: debugdemoimage.azurecr.io
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+      - name: Docker build and push
+        run: |
+          cd Sample-services/world-service/WorldService
+          docker build . -t world-service
+          docker tag world-service:latest debugdemoimage.azurecr.io/world-service:latest
+          docker push debugdemoimage.azurecr.io/world-service:latest
