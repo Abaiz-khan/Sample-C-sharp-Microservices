@@ -18,7 +18,8 @@ jobs:
       - name: Navigating to directory
         run: |
              pwd
-             cd ./Deployment-definitions
+             cd ..
+             cd Deployment-definitions
              kubectl apply -f hello-deployment.yaml
              kubectl apply -f world-deployment.yaml
              cd
