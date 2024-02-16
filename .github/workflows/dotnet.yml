@@ -181,4 +181,22 @@ jobs:
 
       - name: Run tests
         run: dotnet test ./Sample-services/world-service/WorldService.Tests
-  
+###################################### From here job 5 starts ###################### 
+  Pushingimages-HelloService:
+   runs-on: ubuntu-22.04
+   needs: Unittest-HelloService
+   steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: az login
+        uses: azure/docker-login@v1
+        with:
+          login-server: debugdemoimage.azurecr.io
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+      - name: Docker build and push
+        run: |
+          cd Sample-services/world-service/WorldService
+          docker build . -t hello-service
+          docker tag hello-service:latest debugdemoimage.azurecr.io/hello-service:latest
+          docker push debugdemoimage.azurecr.io/hello-service:latest
