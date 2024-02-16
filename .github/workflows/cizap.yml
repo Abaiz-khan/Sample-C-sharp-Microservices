@@ -13,7 +13,7 @@ jobs:
       - name: Deploying Services
         run: |
            pwd
-           cd ./Deployment-definitions
+           cd ../Deployment-definitions
            az aks get-credentials --resource-group debug-demo --name debugdemocluster
            kubectl get nodes
            az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
