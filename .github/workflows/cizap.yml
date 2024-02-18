@@ -1,4 +1,4 @@
-name: Navigate to Deployment-definitions
+name: Navigate to Deployment-definitions and deploy
 
 on:
   push:
@@ -6,18 +6,34 @@ on:
       - main
 
 jobs:
-  navigate:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Log in with Azure
-        uses: azure/login@v1
-        with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'  
-
       - name: Navigate to Deployment-definitions
-        run: cd ./Deployment-definitions && pwd && ls
+        run: |
+          cd ../Deployment-definitions && pwd && ls
 
+      - name: Azure AKS credentials
+        run: az aks get-credentials --resource-group debug-demo --name debugdemocluster
+
+      - name: Get AKS nodes
+        run: kubectl get nodes
+
+      - name: List ACR login server
+        run: az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
+
+      - name: Apply hello-deployment.yaml
+        run: kubectl apply -f hello-deployment.yaml
+
+      - name: Apply world-deployment.yaml
+        run: kubectl apply -f world-deployment.yaml
+
+      - name: Get Kubernetes events
+        run: kubectl get events
+
+      - name: Get Kubernetes services
+        run: kubectl get services
 
