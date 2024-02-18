@@ -220,3 +220,39 @@ jobs:
           docker build . -t world-service
           docker tag world-service:latest debugdemoimage.azurecr.io/world-service:latest
           docker push debugdemoimage.azurecr.io/world-service:latest
+
+################################################## From here job 7 starts ################################## 
+  Navigate_to_Deployment_definitions_and_deploy:
+    runs-on: ubuntu-latest
+    needs: [Unittest-WorldService,Unittest-HelloService]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log in with Azure
+        uses: azure/login@v1
+        with:
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+
+      - name: Navigate to Deployment-definitions
+        run: cd ./Deployment-definitions && pwd && ls
+
+      - name: Navigate to Deployment-definitions
+        run: |
+          pwd && ls
+          cd ./Deployment-definitions && pwd && ls
+          az aks get-credentials --resource-group debug-demo --name debugdemocluster
+          kubectl get nodes
+          az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
+          kubectl apply -f hello-deployment.yaml
+          kubectl apply -f world-deployment.yaml
+          
+      - name: Sleep for a bit
+        uses: jakejarvis/wait-action@master
+        with:
+          time: "30s"
+
+      - name: Navigate to Deployment-definitions
+        run: |
+          kubectl get events
+          kubectl get services
