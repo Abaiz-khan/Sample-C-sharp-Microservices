@@ -23,4 +23,4 @@ jobs:
       - name: Navigate to Deployment-definitions
         run: |
           pwd && ls
-
+          cd ./Deployment-definitions && pwd && ls
