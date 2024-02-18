@@ -24,3 +24,7 @@ jobs:
         run: |
           pwd && ls
           cd ./Deployment-definitions && pwd && ls
+          az aks get-credentials --resource-group debug-demo --name debugdemocluster
+          
+
+
