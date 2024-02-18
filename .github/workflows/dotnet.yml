@@ -1,4 +1,4 @@
-name: CI-PIPELINE
+name: CICD-PIPELINE
 
 on:
   push:
