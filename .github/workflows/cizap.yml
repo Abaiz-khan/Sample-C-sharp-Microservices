@@ -13,8 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Navigate to Deployment-definitions
-        run: |
-          cd ../Deployment-definitions && pwd && ls
+        run: cd ../Deployment-definitions && pwd && ls
 
       - name: Azure AKS credentials
         run: az aks get-credentials --resource-group debug-demo --name debugdemocluster
