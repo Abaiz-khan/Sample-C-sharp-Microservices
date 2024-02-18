@@ -224,7 +224,7 @@ jobs:
 ################################################## From here job 7 starts ################################## 
   Navigate_to_Deployment_definitions_and_deploy:
     runs-on: ubuntu-latest
-    needs: [Unittest-WorldService,Unittest-HelloService]
+    needs: [Pushingimages-HelloService,Pushingimages-WorldService]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
