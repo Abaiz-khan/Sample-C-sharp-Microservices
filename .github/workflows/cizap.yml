@@ -29,9 +29,15 @@ jobs:
           az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
           kubectl apply -f hello-deployment.yaml
           kubectl apply -f world-deployment.yaml
+          
+      - name: Sleep for a bit
+        uses: jakejarvis/wait-action@master
+        with:
+          time: "30s"
+
+      - name: Navigate to Deployment-definitions
+        run: |
           kubectl get events
           kubectl get services
-          
-          
 
 
