@@ -1,41 +1,21 @@
-name: Navigate to Deployment-definitions and deploy
-
+name: "sonar_cloud_scan_github_actions"
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  DemoSonarCloudSCan:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Log in with Azure
-        uses: azure/login@v1
+      - uses: actions/checkout@v3
         with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
-
-      - name: Navigate to Deployment-definitions
-        run: cd ./Deployment-definitions && pwd && ls
-
-      - name: Navigate to Deployment-definitions
-        run: |
-          pwd && ls
-          cd ./Deployment-definitions && pwd && ls
-          az aks get-credentials --resource-group debug-demo --name debugdemocluster
-          kubectl get nodes
-          az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
-          kubectl apply -f hello-deployment.yaml
-          kubectl apply -f world-deployment.yaml
-          
-      - name: Sleep for a bit
-        uses: jakejarvis/wait-action@master
+            fetch-depth: 0
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+            GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          time: "30s"
-
-      - name: Navigate to Deployment-definitions
-        run: |
-          kubectl get events
-          kubectl get services
-
-
+          args: >
+              -Dsonar.organization=Abaiz
+              -Dsonar.projectKey=sample-services
+              
