@@ -18,4 +18,4 @@ jobs:
           args: >
               -Dsonar.organization=Abaiz
               -Dsonar.projectKey=sample-services
-              
+              -Dsonar.python.coverage.reportPaths=coverage.xml
