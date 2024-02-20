@@ -16,6 +16,6 @@ jobs:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-              -Dsonar.organization=Abaiz
+              -Dsonar.organization=abaiz-khan
               -Dsonar.projectKey=sample-services
               -Dsonar.python.coverage.reportPaths=coverage.xml
