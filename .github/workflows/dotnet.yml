@@ -145,22 +145,26 @@ jobs:
           name: zap-scan-report
           path: ./Sample-services/zap-alerts-world.txt       
 ################ for nexus #################
-      - name: Upload Report of hello service to Nexus Repository
+      - name: Nexus Repo Publish
         uses: sonatype-nexus-community/nexus-repo-github-action@master
         with:
-          serverUrl: http://127.0.0.1:8081/repository/zap-reports
+          serverUrl: http://127.0.0.1:8081
           username: admin
           password: ${{ secrets.NEXUSPASSWORD }}
+          format: maven2
+          repository: zap-reports
           coordinates: groupId=com.example artifactId=zap-reports-hello version=1.0.0
           assets: extension=txt
           filename: ./Sample-services/zap-alerts.txt
 
-      - name: Upload Report of world service to Nexus Repository
+      - name: Nexus Repo Publish
         uses: sonatype-nexus-community/nexus-repo-github-action@master
         with:
-          serverUrl: http://127.0.0.1:8081/repository/zap-reports
+          serverUrl: http://127.0.0.1:8081
           username: admin
           password: ${{ secrets.NEXUSPASSWORD }}
+          format: maven2
+          repository: zap-reports
           coordinates: groupId=com.example artifactId=zap-reports-world version=1.0.0
           assets: extension=txt
           filename: ./Sample-services/zap-alerts-world.txt    
