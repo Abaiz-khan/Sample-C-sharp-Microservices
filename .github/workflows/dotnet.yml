@@ -7,6 +7,25 @@ on:
      branches: [ "main" ]
 
 jobs:
+  DemoSonarCloudSCan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+            GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+              -Dsonar.organization=abaiz-khan
+              -Dsonar.projectKey=sample-services
+              -Dsonar.python.coverage.reportPaths=coverage.xml
+
+##################################### ##############################3
+  
   build-test:
 
     runs-on: ubuntu-latest
@@ -143,35 +162,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: zap-scan-report
-          path: ./Sample-services/zap-alerts-world.txt       
-################ for nexus #################
-
-      - name: Check Network Connectivity to Nexus Repository Manager
-        run: curl -I http://127.0.0.1:8081
-      
-      - name: Nexus Repo Publish
-        uses: sonatype-nexus-community/nexus-repo-github-action@master
-        with:
-          serverUrl: http://localhost:8081
-          username: admin
-          password: ${{ secrets.NEXUSPASSWORD }}
-          format: maven2
-          repository: zap-reports
-          coordinates: groupId=com.example artifactId=zap-reports-hello version=1.0.0
-          assets: extension=txt
-          filename: ./Sample-services/zap-alerts.txt
-
-      - name: Nexus Repo Publish
-        uses: sonatype-nexus-community/nexus-repo-github-action@master
-        with:
-          serverUrl: http://localhost:8081
-          username: admin
-          password: ${{ secrets.NEXUSPASSWORD }}
-          format: maven2
-          repository: zap-reports
-          coordinates: groupId=com.example artifactId=zap-reports-world version=1.0.0
-          assets: extension=txt
-          filename: ./Sample-services/zap-alerts-world.txt    
+          path: ./Sample-services/zap-alerts-world.txt         
        
 ############### From here job 3 starts ##############
   Unittest-HelloService:
