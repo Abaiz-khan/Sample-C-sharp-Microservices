@@ -56,11 +56,17 @@ ajaxResults = zap.ajaxSpider.results(start=0, count=10)
 print('Active Scanning target {}'.format(target))
 scanID = zap.ascan.scan(target)
 print(scanID)
-print(zap.ascan.status(scanID))
-while int(zap.ascan.status(scanID)) < 100:
-    # Loop until the scanner has finished
-    print('Scan progress %: {}'.format(zap.ascan.status(scanID)))
-    time.sleep(25)
+
+try:
+    status = int(zap.ascan.status(scanID))
+    while status < 100:
+        # Loop until the scanner has finished
+        print('Scan progress %: {}'.format(status))
+        time.sleep(25)
+        status = int(zap.ascan.status(scanID))
+except ValueError:
+    # If no integer is received, print a message indicating that the service flag is turned off
+    print("The service flag is turned off for hello service")
 
 print('Active Scan completed')
 # Print vulnerabilities found by the scanning
