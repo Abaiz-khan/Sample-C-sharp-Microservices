@@ -23,7 +23,7 @@ namespace HelloService.Tests.Controllers
             Assert.IsNotNull(result);
             var okResult = result as OkObjectResult;
             Assert.IsNotNull(okResult);
-            Assert.AreEqual("Hello", okResult.Value); // Make sure to assert for "Hello" instead of "hello"
+            Assert.AreEqual("Hello", okResult.Value); // Make sure to assert for "Hello" instead of hello
         }
     }
 }
