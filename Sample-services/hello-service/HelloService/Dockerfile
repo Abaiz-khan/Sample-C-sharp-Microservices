@@ -14,7 +14,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # Define the runtime image using the .NET runtime 7.0
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "HelloService.dll"]
