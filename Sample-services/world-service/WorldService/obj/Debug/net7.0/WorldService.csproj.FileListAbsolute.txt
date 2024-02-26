@@ -66,3 +66,46 @@
 /home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.pdb
 /home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.genruntimeconfig.cache
 /home/cl/Desktop/to be deleted/sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/ref/WorldService.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/appsettings.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/appsettings.Development.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/swagger.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService.deps.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService.runtimeconfig.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/WorldService.pdb
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.AspNetCore.JsonPatch.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.AspNetCore.Razor.Language.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.CodeAnalysis.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.CodeAnalysis.CSharp.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.CodeAnalysis.Razor.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.DotNet.PlatformAbstractions.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.Extensions.Configuration.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Newtonsoft.Json.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/bin/Debug/net7.0/System.Security.Permissions.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.csproj.AssemblyReference.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.GeneratedMSBuildEditorConfig.editorconfig
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.AssemblyInfoInputs.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.AssemblyInfo.cs
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.csproj.CoreCompileInputs.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.MvcApplicationPartsAssemblyInfo.cs
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.MvcApplicationPartsAssemblyInfo.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.RazorAssemblyInfo.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.RazorAssemblyInfo.cs
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.sourcelink.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldSer.B29A7D91.Up2Date
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/refint/WorldService.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.pdb
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/WorldService.genruntimeconfig.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/world-service/WorldService/obj/Debug/net7.0/ref/WorldService.dll

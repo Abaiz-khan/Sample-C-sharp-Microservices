@@ -33,3 +33,43 @@
 /home/cl/Desktop/forzap2/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.pdb
 /home/cl/Desktop/forzap2/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.genruntimeconfig.cache
 /home/cl/Desktop/forzap2/Sample-services/hello-service/HelloService/obj/Debug/net8.0/ref/HelloService.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/appsettings.Development.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/appsettings.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/swagger.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/HelloService
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/HelloService.deps.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/HelloService.runtimeconfig.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/HelloService.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/HelloService.pdb
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.AspNetCore.Razor.Language.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.CodeAnalysis.Razor.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.DotNet.PlatformAbstractions.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/bin/Debug/net8.0/System.Security.Permissions.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.csproj.AssemblyReference.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.GeneratedMSBuildEditorConfig.editorconfig
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.AssemblyInfoInputs.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.AssemblyInfo.cs
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.csproj.CoreCompileInputs.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.MvcApplicationPartsAssemblyInfo.cs
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.MvcApplicationPartsAssemblyInfo.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.RazorAssemblyInfo.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.RazorAssemblyInfo.cs
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.sourcelink.json
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloSer.40115DD6.Up2Date
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/refint/HelloService.dll
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.pdb
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/HelloService.genruntimeconfig.cache
+/home/cl/Desktop/Feature-toggling /sample-services/Sample-services/hello-service/HelloService/obj/Debug/net8.0/ref/HelloService.dll
