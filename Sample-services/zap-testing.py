@@ -55,6 +55,8 @@ ajaxResults = zap.ajaxSpider.results(start=0, count=10)
 # TODO: Start scanning the application to find vulnerabilities
 print('Active Scanning target {}'.format(target))
 scanID = zap.ascan.scan(target)
+print(scanID)
+print(zap.ascan.status(scanID))
 while int(zap.ascan.status(scanID)) < 100:
     # Loop until the scanner has finished
     print('Scan progress %: {}'.format(zap.ascan.status(scanID)))
