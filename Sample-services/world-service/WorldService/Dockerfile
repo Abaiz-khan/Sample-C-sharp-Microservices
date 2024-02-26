@@ -1,4 +1,4 @@
-# Use the official .NET SDK 7.0 as a base image for building
+# Use the official .NET SDK 8.0 as a base image for building
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 
 WORKDIR /app
@@ -13,8 +13,8 @@ COPY . ./
 # Build the application
 RUN dotnet publish -c Release -o out
 
-# Define the runtime image using the .NET runtime 7.0
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+# Define the runtime image using the .NET runtime 8.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "WorldService.dll"]
