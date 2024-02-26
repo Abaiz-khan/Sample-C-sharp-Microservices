@@ -263,9 +263,25 @@ jobs:
           az aks get-credentials --resource-group debug-demo --name debugdemocluster
           kubectl get nodes
           az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
-          kubectl apply -f hello-deployment.yaml
-          kubectl apply -f world-deployment.yaml
           
+          # Define feature toggle flags for hello and world services
+          HELLO_TOGGLE="off"
+          WORLD_TOGGLE="on"
+
+          # Check if the feature toggle for hello service is on
+          if [[ "${HELLO_TOGGLE}" == "on" ]]; then
+            kubectl apply -f hello-deployment.yaml
+          else
+            echo "Hello service feature toggle is turned off, skipping deployment."
+          fi
+          
+          # Check if the feature toggle for world service is on
+          if [[ "${WORLD_TOGGLE}" == "on" ]]; then
+            kubectl apply -f world-deployment.yaml
+          else
+            echo "World service feature toggle is turned off, skipping deployment."
+          fi
+
       - name: Sleep for a bit
         uses: jakejarvis/wait-action@master
         with:
