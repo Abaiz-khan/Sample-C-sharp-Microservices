@@ -6,11 +6,11 @@ services:
       context: ./Sample-services/hello-service/HelloService
       dockerfile: Dockerfile
     ports:
-      - "5074:80" # Map the service's port to the host machine
+      - "5074:8080" # Map the service's port to the host machine
 
   world-service:
     build:
       context: ./Sample-services/world-service/WorldService
       dockerfile: Dockerfile
     ports:
-      - "5039:80" # Map the service's port to the host machine
+      - "5039:8080" # Map the service's port to the host machine
