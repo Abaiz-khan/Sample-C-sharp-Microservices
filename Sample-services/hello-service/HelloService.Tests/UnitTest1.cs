@@ -1,5 +1,7 @@
 using HelloService.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging.Abstractions; // Import NullLogger
 using NUnit.Framework;
 
 namespace HelloService.Tests.Controllers
@@ -10,7 +12,9 @@ namespace HelloService.Tests.Controllers
         public void Get_ReturnsHello()
         {
             // Arrange
-            var controller = new HelloController();
+            var logger = NullLogger<HelloController>.Instance;
+            var configuration = new ConfigurationBuilder().Build();
+            var controller = new HelloController(logger, configuration);
 
             // Act
             IActionResult result = controller.Get();
@@ -19,7 +23,7 @@ namespace HelloService.Tests.Controllers
             Assert.IsNotNull(result);
             var okResult = result as OkObjectResult;
             Assert.IsNotNull(okResult);
-            Assert.AreEqual("hello", okResult.Value);
+            Assert.AreEqual("Hello", okResult.Value); // Ensure the expected value is "Hello" with capital H
         }
     }
 }
