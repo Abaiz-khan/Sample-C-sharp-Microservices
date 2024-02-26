@@ -1,5 +1,5 @@
 # Use the official .NET SDK 7.0 as a base image for building
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 
 WORKDIR /app
 
