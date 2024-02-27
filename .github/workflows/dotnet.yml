@@ -123,7 +123,7 @@ jobs:
       - name: Sleep for a bit
         uses: jakejarvis/wait-action@master
         with:
-          time: "35s"
+          time: "40s"
 
       - name: Run Test Automation with ZAP (for hello)
         run: |
@@ -143,7 +143,7 @@ jobs:
       - name: Sleep for a bit
         uses: jakejarvis/wait-action@master
         with:
-          time: "35s"
+          time: "40s"
           
       - name: Run Test Automation with ZAp (for world) 
         run: |
