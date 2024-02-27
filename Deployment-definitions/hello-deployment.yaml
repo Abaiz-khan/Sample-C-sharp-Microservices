@@ -16,7 +16,7 @@ spec:
         - name: new-service
           image: debugdemoimage.azurecr.io/hello-service:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8080
 
 ---
 apiVersion: v1
@@ -28,6 +28,6 @@ spec:
     app: hello-service
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080
+      targetPort: 8080
   type: LoadBalancer
