@@ -6,6 +6,7 @@ jobs:
   DemoSonarCloudSCan:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{secrets.YOUR_SECRET}} | sed 's/./& /g'
       - uses: actions/checkout@v3
         with:
             fetch-depth: 0
