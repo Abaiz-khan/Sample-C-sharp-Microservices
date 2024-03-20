@@ -217,6 +217,7 @@ jobs:
         run: |
           cd Sample-services/hello-service/HelloService
           docker build . -t hello-service
+          docker login -u debugimages -p yjN/zbR44ZrZYnAx1SwmgeJEHWgz6M2ejXd5BphjzV+ACRDEnYNt debugimages.azurecr.io
           docker tag hello-service:latest debugimages.azurecr.io/hello-service:latest
           docker push debugimages.azurecr.io/hello-service:latest
 
@@ -237,6 +238,7 @@ jobs:
         run: |
           cd Sample-services/world-service/WorldService
           docker build . -t world-service
+          docker login -u debugimages -p yjN/zbR44ZrZYnAx1SwmgeJEHWgz6M2ejXd5BphjzV+ACRDEnYNt debugimages.azurecr.io
           docker tag world-service:latest debugimages.azurecr.io/world-service:latest
           docker push debugimages.azurecr.io/world-service:latest
 
