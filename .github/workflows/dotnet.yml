@@ -217,8 +217,8 @@ jobs:
         run: |
           cd Sample-services/hello-service/HelloService
           docker build . -t hello-service
-          docker tag hello-service:latest debugdemoimage.azurecr.io/hello-service:latest
-          docker push debugdemoimage.azurecr.io/hello-service:latest
+          docker tag hello-service:latest debugimages.azurecr.io/hello-service:latest
+          docker push debugimages.azurecr.io/hello-service:latest
 
 ############################################ From here job 6 starts #######################
   Pushingimages-WorldService:
@@ -237,8 +237,8 @@ jobs:
         run: |
           cd Sample-services/world-service/WorldService
           docker build . -t world-service
-          docker tag world-service:latest debugdemoimage.azurecr.io/world-service:latest
-          docker push debugdemoimage.azurecr.io/world-service:latest
+          docker tag world-service:latest debugimages.azurecr.io/world-service:latest
+          docker push debugimages.azurecr.io/world-service:latest
 
 ################################################## From here job 7 starts ################################## 
   Navigate_to_Deployment_definitions_and_deploy:
@@ -260,9 +260,9 @@ jobs:
         run: |
           pwd && ls
           cd ./Deployment-definitions && pwd && ls
-          az aks get-credentials --resource-group debug-demo --name debugdemocluster
+          az aks get-credentials --resource-group deployment-demo --name debugdemo
           kubectl get nodes
-          az acr list --resource-group debug-demo --query "[].{acrLoginServer:loginServer}" --output table
+          az acr list --resource-group deployment-demo --query "[].{acrLoginServer:loginServer}" --output table
           
           # Define feature toggle flags for hello and world services
           HELLO_TOGGLE="off"
