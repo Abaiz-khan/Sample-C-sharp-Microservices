@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: new-service
-          image: debugdemoimage.azurecr.io/hello-service:latest
+          image: debugimages.azurecr.io/hello-service:latest
           ports:
             - containerPort: 8080
 
