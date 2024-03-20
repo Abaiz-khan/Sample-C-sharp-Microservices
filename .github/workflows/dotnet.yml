@@ -210,7 +210,7 @@ jobs:
       - name: az login
         uses: azure/docker-login@v1
         with:
-          login-server: debugdemoimage.azurecr.io
+          login-server: debugimages.azurecr.io
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - name: Docker build and push
@@ -230,7 +230,7 @@ jobs:
       - name: az login
         uses: azure/docker-login@v1
         with:
-          login-server: debugdemoimage.azurecr.io
+          login-server: debugimages.azurecr.io
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - name: Docker build and push
