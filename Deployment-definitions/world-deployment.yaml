@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: world-service
-          image: debugdemoimage.azurecr.io/world-service:latest
+          image: debugimages.azurecr.io/world-service:latest
           ports:
             - containerPort: 8080
 
