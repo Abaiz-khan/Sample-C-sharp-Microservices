@@ -267,7 +267,7 @@ jobs:
           az acr list --resource-group deployment-demo --query "[].{acrLoginServer:loginServer}" --output table
           
           # Define feature toggle flags for hello and world services
-          HELLO_TOGGLE="off"
+          HELLO_TOGGLE="on"
           WORLD_TOGGLE="on"
 
           # Check if the feature toggle for hello service is on
