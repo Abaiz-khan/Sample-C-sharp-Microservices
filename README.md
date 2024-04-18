@@ -1,4 +1,6 @@
-**Repository Name: Microservices CI/CD with Kubernetes and Terraform**
+**Repository Name: Sample-services**
+
+Topic :  Microservices CI/CD with Kubernetes and Terraform
 
 ## Overview
 
