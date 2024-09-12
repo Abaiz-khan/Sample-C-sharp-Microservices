@@ -8,4 +8,4 @@ script paste your terraform script. Dont forget to make the outputs.tf, Reffer t
 STEPS:-
  > Make a directory named terratest-project, In that directory make two folders one terraform scripts and other one named tests.
  > In the terraform scripts folder paste your infrastructure.tf file only.
- > 
+ > Run tests
